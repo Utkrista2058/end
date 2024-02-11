@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Approval System</title>
+    <style>
+           body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background: url('file:///C:/Users/utkri/Desktop/html%20site/1234.jpg') center/cover;
+        }
+
+        .welcome-container {
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 600px; /* Increased width */
+            animation: fadeIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            z-index: 1;
+            margin-top: 50px; /* Adjusted margin */
+        }
+
+        .login-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            background: url('https://www.shutterstock.com/image-photo/abstract-blurred-image-ux-ui-design-607473122') center/cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px; /* Decreased font size */
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+        }
+
+        .form-group input:focus {
+            background-color: #fff;
+        }
+
+        .form-group button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .new-account-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .new-account-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .new-account-link a:hover {
+            color: #0056b3;
+        }
+    </style>
+    </style>
+</head>
+<body>
+
+<div class="welcome-container">
+    <div>Welcome back!</div>
+    <div>Please login to continue.</div>
+</div>
+
+<div class="login-container">
+    <h2>Credit Card Approval System</h2>
+    <form class="login-form" id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="validateLogin()">Login</button>
+        </div>
+    </form>
+    <div class="new-account-link">
+        <p>Don't have an account? <a href="create_account.html">Create New Account</a></p>
+    </div>
+</div>
+
+<script>
+    function validateLogin() {
+        // Add your login validation logic here
+        // Example: check if username and password are correct
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'username' && password === 'password') {
+            // Redirect to the new page (replace 'dashboard.html' with your desired page)
+            window.location.href = 'file:///C:/Users/utkri/Desktop/html%20site/dashboard.html';
+        } else {
+            alert('Invalid username or password');
+        }
+    }
+</script>
+
+</body>
+</html>
